@@ -15,7 +15,6 @@ public class Hazard : MonoBehaviour {
         {
             return;
         }
-
         target.TakeDamage(damageValue);
         Destroy(gameObject);
     }

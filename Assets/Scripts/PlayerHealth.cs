@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour, IDamageable
 {
-    public float healthValue = 25.0f;
+    public float healthValue = 20.0f;
    
     public void TakeDamage(float damageDealt)
     {
         healthValue -= damageDealt;
 
-        if(healthValue < 0)
+        if(healthValue <= 0)
         {
-            SceneManager.LoadScene("game scene");
+            SceneManager.LoadScene("gameover");
         }
     }
 

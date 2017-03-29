@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pickup : MonoBehaviour
 {
     public int Value = 1;
-
+    public Sprite inventoryImage;
 
     void OnTriggerEnter(Collider other)
     {
@@ -16,4 +16,14 @@ public class Pickup : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public Item GetItem()
+    {
+        Item temp = new Item();
+
+        temp.sprite = inventoryImage;
+
+        return temp;
+    }
+    
 }
